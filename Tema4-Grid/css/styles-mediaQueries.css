@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.border{
+    border: solid red;
+}
+body{
+    background-color: blue;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas: 
+    "nav header header"
+    "nav products aside"
+    "nav services aside"
+    "nav footer footer"
+    ;
+    grid-template-rows: 20% 50% 30%;
+    grid-template-columns: 20% 30% 30% 20%;
+}
+
+
+@media (max-width: 480px) {
+    body{
+
+        background-color: green;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+        "nav header header"
+        "products products products"
+        "services services services"
+        "footer footer aside"
+        ;
+        grid-template-rows: 20% 30% 50%;
+        grid-template-columns: 20% 25% 25% 30%;
+    }    
+}
+
+nav{
+    grid-area: nav;
+}
+
+#products{
+    grid-area: products;
+}
+
+#services{
+    grid-area: services;
+}
+
+footer{
+    grid-area: footer;
+}
+
+aside{
+    grid-area: aside;
+}
+
+header{
+    grid-area: header;
+}
