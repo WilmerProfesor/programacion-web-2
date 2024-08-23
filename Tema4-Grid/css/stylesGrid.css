@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.border{
+    border: solid gray;
+}
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "products services publicidad"
+    "footer footer publicidad"
+    ;
+    grid-template-columns: 35% 35% 30%;
+    grid-template-rows: 20% 60% 20%;
+
+}
+
+header{
+    grid-area: header;
+}
+
+aside{
+    grid-area: publicidad;
+}
+
+#products{
+    grid-area: products;
+}
+
+#services{
+    grid-area: service;
+}
+
+footer{
+    grid-area: footer;
+}

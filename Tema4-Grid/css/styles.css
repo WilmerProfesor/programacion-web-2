@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.border{
+    border: solid grey;    
+}
+
+header{
+    height: 20%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100vw;
+    border: solid red;    
+}
+
+#todo1{
+    display: flex;
+    flex-direction: row;   
+    height: 100%;
+    width: 100%;
+    background-color: green;
+}
+
+#todo2{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+#todo3{
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+}
+
+aside{
+    height: 100;
+    background-color: yellow;  
+    width: 30%;  
+}
+
+footer{
+    height: 20%;
+}
+
+section{
+    width: 50%;
+}
