@@ -1,0 +1,18 @@
+#test{
+    width: 100px;
+    height: 100px;
+    border: solid red;
+    background-color: red;
+}
+
+#test:hover{
+    background-color: blue;
+}
+
+#test::first-letter{    
+    font-size: 6rem;
+}
+
+.text--negrita{
+    font-weight: bold;
+}
