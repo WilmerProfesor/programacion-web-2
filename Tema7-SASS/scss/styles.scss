@@ -1,0 +1,47 @@
+@import "colors";
+$width-box: 750px;
+
+%boton {
+    border: solid;
+    border-width: 1px;
+    background-color: $color-primario;
+    padding: 5px 10px;
+    margin: 5px 15px;  
+    border-radius: 15px;
+    &:hover{
+        box-shadow: $color-shadow;
+    }  
+}
+
+%botonEspecial {    
+    padding: 5px 10px;
+    margin: 5px 15px;  
+    background-color: $color-primario-destacado;
+    border-radius: 15px;    
+    font-size: 2rem;
+    // con el ampersam llamo nuevamente el nombre del elemento PADRE en el que me encuentro para este ejemplo es como si colocara>> botonEspecial:hover
+    &:hover{  
+        box-shadow: $color-shadow;
+    }  
+}
+
+ul{
+    list-style: none;
+    li{
+        display: inline-block;
+        @extend %boton;
+        // padding: 15px;
+        // box-shadow: $color-shadow;
+        // margin: 5px 15px;
+        // border-radius: 15%;
+        a{
+            text-decoration: none;
+            font-size: 2rem;
+            color: $color-gray;                        
+        }        
+    }
+    .specialBox{
+        // @extend %botonEspecial;
+        border: red;
+    }
+}
