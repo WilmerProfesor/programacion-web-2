@@ -1,0 +1,57 @@
+@import "colores";
+$ancho: 750px;
+$id: 0;
+
+%menuBotton{
+    background-color: green;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px black;
+    padding: 10px;
+    width: 60px;
+    text-align: center;    
+}
+
+ul{
+    border-top: solid;
+    border-bottom: solid;
+    list-style: none;
+    width: $ancho;
+    li{
+        @extend %menuBotton;
+        display: inline-block;     
+        margin: 10px 20px;        
+        &:hover{
+            background-color: $rojo-institucional;
+        }
+        a{
+            text-decoration: none;
+            color: white;            
+        }
+
+    }
+}
+
+// $map: (key1: value1, key2: value2, ... , keyN:valueN);
+$rows: (
+    "-1": rgb(10, 250, 10),
+    "-2": rgb(124, 186, 124),
+    "-3": rgb(45, 105, 45),
+    "-4": rgb(43, 207, 43),
+    "-5": rgb(186, 236, 186),
+) ; 
+
+@each $user, $image in $rows{
+    #item#{$user}{
+        background-color: $image;
+    }
+}
+
+// @for $id from 1 to 11{
+//     #item-#{$id}{
+//         @if ($id%2==0){
+//             background-color: rgba(234, 234, 234, 0.427);        
+//         }@else{
+//             background-color: rgba(160, 158, 158, 0.876);                    
+//         }
+//     }    
+// }
