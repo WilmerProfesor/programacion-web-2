@@ -107,5 +107,3 @@ class Persona{
 }
 const obj1=new Persona("Carlos",18,true);
 console.log(obj1);
-
-
