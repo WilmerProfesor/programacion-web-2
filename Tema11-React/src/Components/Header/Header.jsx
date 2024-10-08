@@ -7,7 +7,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 const Header = () => {
   return (
     <header>   
-        <logoShop/>   
+        <img id='logo-header' src={logoShop} alt="" />
         <AddShoppingCartIcon/>
         <p>Mi primera Pagina ASP con REACT Y VITE</p>
         <p>2024</p>
