@@ -1,19 +1,38 @@
 import "./CharacterPage.css";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import axios from "axios";
+
+import CharCard from "../../Components/CharCard/ChardCard";
 
 const CharacterPage = () => {
   
-  const [charId, setCharId]=useState(0);
-  let {id} = useParams();
+  const [data, setData]=useState([]);
   
+  let {specie} = useParams();
+
  useEffect(()=>{
-   setCharId(id);
- },[id]);
+  axios.get(`https://rickandmortyapi.com/api/character`)
+  .then(char=> setData(char.data.results))},[])
+
+  
+  const tmp=data.filter(elem=>elem.species===specie);
+  
 
   return (
     <main id='character-page'>
-        <h1>Character Page</h1>
+        <h1 id="title-character">Character Page</h1>        
+        {
+          <div id="characters-species">
+            {tmp.map((element)=>
+              <div key={element.id}>
+                <Link to={"/details/"+element.id}>
+                    <CharCard img={element.image} nombre={element.name} especie={element.species}/>
+                </Link>            
+              </div>
+            )}  
+          </div>
+        }
     </main>
   )
 }

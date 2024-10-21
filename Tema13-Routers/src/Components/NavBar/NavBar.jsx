@@ -7,16 +7,16 @@ const NavBar = () => {
   return (
     <nav>        
         <Link to={"/"}>
-          <Button sx={{marginTop: 4, width: 100}} variant="contained">Inicio</Button>
+          <Button sx={{marginTop: 4, width: 150}} variant="contained">Inicio</Button>
         </Link>
-        <Link to={"/character"}>
-          <Button sx={{marginTop: 4, width: 100}} variant="contained">2</Button>  
+        <Link to={"/character/Alien"}>
+          <Button sx={{marginTop: 4, width: 150}} variant="contained">Aliens</Button>  
         </Link>
-        <Link to={"/character"}>
-          <Button sx={{marginTop: 4, width: 100}} variant="contained">3</Button>
+        <Link to={"/character/Human"}>
+          <Button sx={{marginTop: 4, width: 150}} variant="contained">Humanos</Button>
         </Link>
-        <Link to={"/about"}>
-          <Button sx={{marginTop: 4, width: 100}} variant="contained">4</Button>
+        <Link to={"/details"}>
+          <Button sx={{marginTop: 4, width: 150}} variant="contained">Detalles</Button>
         </Link>
     </nav>
   )

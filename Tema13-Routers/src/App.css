@@ -10,3 +10,12 @@
   width: 100vw;
   grid-template-columns: 1fr 4fr;
 }
+
+#div-header{
+  background-color: black;    
+}
+
+#menu{
+  position:sticky;
+  top: 30px;
+}

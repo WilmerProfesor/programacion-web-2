@@ -12,12 +12,15 @@ const App = () => {
   return (
     <div className="App">
       <Router>
-
-        <Header/>
+        <div id="div-header">
+          <div id="menu">
+            <Header/>
+          </div>
+        </div>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
-          <Route path="/character/:id" element={<CharacterPage/>}/>
-          <Route path="/about" element={<AboutPage/>}/>
+          <Route path="/character/:specie" element={<CharacterPage/>}/>
+          <Route path="/details/:id" element={<AboutPage/>}/>
         </Routes>
       </Router>
     </div>

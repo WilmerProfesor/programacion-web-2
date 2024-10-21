@@ -1,11 +1,26 @@
 import "./AboutPage.css";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-const Aboutpage = () => {
+import CharCard from "../../Components/CharCard/ChardCard";
+
+const AboutPage = () => {
+  
+  const [data, setData]=useState({});
+  
+  let {id} = useParams();
+
+ useEffect(()=>{
+  axios.get(`https://rickandmortyapi.com/api/character/${id}`)
+  .then(char=> setData(char.data))},[])
+
   return (
-    <main id='about-page'>
-
+    <main id='character-page'>
+        <h1 id="title-character">Character Page</h1>    
+        <CharCard img={data.image} nombre={data.name} especie={data.species}/>
     </main>
   )
 }
 
-export default Aboutpage
+export default AboutPage
